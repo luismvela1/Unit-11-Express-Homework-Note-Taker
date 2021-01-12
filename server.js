@@ -11,7 +11,7 @@ var PORT = process.env.PORT || 8080;
 // sets up express to execute data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
+app.use("/assets", express.static("./assets"));
 
 // routes 
 require("./routes/apiRoutes")(app);
